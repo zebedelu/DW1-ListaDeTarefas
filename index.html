@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lista de tarefas</title>
+		<link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />   
+	</head>
+	<body>
+		<nav class="nav">
+			<div class="titulo">
+				<img src="imagens/logo.png" />
+				<h2>Lista de afazeres</h2>
+			</div>
+			<div class="botoes">
+				<a href="lista.html" class="redirectButton"><i class="fa-solid fa-list"></i><p>Lista de Terefas</p></a>
+				<a href="index.html" class="redirectButton"><i class="fa-solid fa-plus"></i><p>Criar Nova Tarefa</p></a>
+			</div>
+		</nav>
+		<main class="main">
+			<div class="inserirDados">
+				<h1 class="title">Criar Nova Tarefa</h1>
+				<p class="title">Informações gerais</p>
+				<div class="form">
+					<div class="part">
+						<label>Propriedade</label>
+						<select id="prioridade">
+							<option value="">Não selecionado</option>
+							<option value="Urgente">Urgente</option>
+							<option value="Normal">Normal</option>
+							<option value="Baixo">Baixo</option>
+						</select>
+					</div>
+					<div class="part">
+						<label>Descrição </label>
+						<input id="descricaoInput" type="text" placeholder="Insira a descrição" />
+					</div>
+					<div class="part">
+						<label>Local </label>
+						<input id="local" type="text" placeholder="Insira o local" />
+					</div>
+					<div class="part">
+						<label>Recursos necessários </label>
+						<input
+							id="recursos"
+							type="text"
+							placeholder="Insira os recursos necessários"
+						/>
+					</div>
+					<div class="subpart"> 
+						<div class="part">
+							<label>Matricula </label>
+							<input
+								id="matricula"
+								type="text"
+								placeholder="Insira sua matricula"
+							/>
+						</div>
+						<div class="part">
+							<label>Data limite </label>
+							<input id="data" type="date" />
+						</div>
+					</div>
+				</div>
+				<button id="enviar" type="button" onclick="CreateTask()">Enviar</button>
+			</div>
+		</main>
+	</body>
+	<script src="script.js"></script>
+</html>
