@@ -7,8 +7,10 @@ async function SearchAPI() {
 }
 
 async function RenderTable(table) {
-    while (document.getElementById("table").firstChild) {
-        document.getElementById("table").firstChild.remove()
+    if (table.length >= 1) {
+        while (document.getElementById("table").firstChild) {
+            document.getElementById("table").firstChild.remove()
+        }
     }
     table.forEach(element => {
         let table_copy = document.getElementById("modelo-tabela").cloneNode(true);
@@ -71,4 +73,5 @@ async function CreateTask() {
         alert("Enviado!");
         window.location.href = "lista.html";
     }
+
 }
